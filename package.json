@@ -1,0 +1,39 @@
+{
+  "name": "iyzipay-node",
+  "version": "1.0.0",
+  "description": "Node.js client for Iyzipay",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha $(find test -name '*Test.js')",
+    "samples": "mocha $(find samples -name '*Samples.js')",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huseyinbabal/iyzipay-node.git"
+  },
+  "keywords": [
+    "iyzipay",
+    "iyzico",
+    "node"
+  ],
+  "author": "Huseyin BABAL <huseyinbabal88@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huseyinbabal/iyzipay-node/issues"
+  },
+  "homepage": "https://github.com/huseyinbabal/iyzipay-node#readme",
+  "dependencies": {
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "async": "^1.5.2",
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.0.0",
+    "should": "^8.2.1",
+    "supertest": "^1.1.0"
+  }
+}
