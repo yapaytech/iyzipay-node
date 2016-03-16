@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - 0.12.7
+
+before_install:
+ - npm install istanbul -g
+ - npm install coveralls -g
+ - npm install mocha -g
+
+script:
+  - npm test
+
+after_success:
+  - npm run coveralls
