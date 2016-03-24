@@ -1,4 +1,4 @@
-# Iyzico Node.js Client
+# iyzipay-node
 
 You can sign up for an iyzico account at [https://iyzico.com](https://iyzico.com)
 
@@ -48,83 +48,83 @@ var iyzipay = new Iyzipay({
 });
 
 var paymentAuth = {
-                locale: Iyzipay.LOCALE.TR,
-                conversationId: '123456789',
-                price: '1.0',
-                paidPrice: '1.1',
-                installment: 1,
-                paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
-                basketId: 'B67832',
-                paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-                paymentCard: {
-                    cardHolderName: 'John Doe',
-                    cardNumber: '5528790000000008',
-                    expireYear: '2030',
-                    expireMonth: '12',
-                    cvc: '123',
-                    registerCard: 0
-                },
-                buyer: {
-                    id: 'BY789',
-                    name: 'John',
-                    surname: 'Doe',
-                    identityNumber: '74300864791',
-                    email: 'email@email.com',
-                    gsmNumber: '+905350000000',
-                    registrationDate: '2013-04-21 15:12:09',
-                    lastLoginDate: '2015-10-05 12:43:35',
-                    registrationAddress: 'Address',
-                    city: 'Istanbul',
-                    country: 'Turkey',
-                    zipCode: '34732',
-                    ip: '85.34.78.112'
-                },
-                shippingAddress: {
-                    address: 'Address',
-                    zipCode: '34742',
-                    contactName: 'Jane Doe',
-                    city: 'Istanbul',
-                    country: 'Turkey'
-                },
-                billingAddress: {
-                    address: 'Address',
-                    zipCode: '34742',
-                    contactName: 'Jane Doe',
-                    city: 'Istanbul',
-                    country: 'Turkey'
-                },
-                basketItems: [
-                    {
-                        id: 'BI101',
-                        price: '0.3',
-                        name: 'Binocular',
-                        category1: 'Collectibles',
-                        category2: 'Accessories',
-                        itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL
-                    },
-                    {
-                        id: 'BI102',
-                        price: '0.5',
-                        name: 'Game code',
-                        category1: 'Game',
-                        category2: 'Online Game Items',
-                        itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL
-                    },
-                    {
-                        id: 'BI103',
-                        price: '0.2',
-                        name: 'Usb',
-                        category1: 'Electronics',
-                        category2: 'Usb / Cable',
-                        itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL
-                    }
-                ]
-            };
+    locale: Iyzipay.LOCALE.TR,
+    conversationId: '123456789',
+    price: '1.0',
+    paidPrice: '1.1',
+    installment: 1,
+    paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
+    basketId: 'B67832',
+    paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
+    paymentCard: {
+        cardHolderName: 'John Doe',
+        cardNumber: '5528790000000008',
+        expireYear: '2030',
+        expireMonth: '12',
+        cvc: '123',
+        registerCard: 0
+    },
+    buyer: {
+        id: 'BY789',
+        name: 'John',
+        surname: 'Doe',
+        identityNumber: '74300864791',
+        email: 'email@email.com',
+        gsmNumber: '+905350000000',
+        registrationDate: '2013-04-21 15:12:09',
+        lastLoginDate: '2015-10-05 12:43:35',
+        registrationAddress: 'Address',
+        city: 'Istanbul',
+        country: 'Turkey',
+        zipCode: '34732',
+        ip: '85.34.78.112'
+    },
+    shippingAddress: {
+        address: 'Address',
+        zipCode: '34742',
+        contactName: 'Jane Doe',
+        city: 'Istanbul',
+        country: 'Turkey'
+    },
+    billingAddress: {
+        address: 'Address',
+        zipCode: '34742',
+        contactName: 'Jane Doe',
+        city: 'Istanbul',
+        country: 'Turkey'
+    },
+    basketItems: [
+        {
+            id: 'BI101',
+            price: '0.3',
+            name: 'Binocular',
+            category1: 'Collectibles',
+            category2: 'Accessories',
+            itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL
+        },
+        {
+            id: 'BI102',
+            price: '0.5',
+            name: 'Game code',
+            category1: 'Game',
+            category2: 'Online Game Items',
+            itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL
+        },
+        {
+            id: 'BI103',
+            price: '0.2',
+            name: 'Usb',
+            category1: 'Electronics',
+            category2: 'Usb / Cable',
+            itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL
+        }
+    ]
+};
 
-            iyzipay.paymentAuth.create(paymentAuth, function (err, result) {
-                console.log(err, result);
-                done();
-            });
+iyzipay.paymentAuth.create(paymentAuth, function (err, result) {
+    console.log(err, result);
+    done();
+});
 ```
 
 You can see further examples in `test/samples` folder, and run them by `npm run-script samples`
@@ -240,4 +240,4 @@ You can see further examples in `test/samples` folder, and run them by `npm run-
 
 You need to have [mocha](https://mochajs.org/) installed on your machine in order to run tests.
  
-`npm test` 
+`npm test`
