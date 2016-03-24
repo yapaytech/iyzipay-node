@@ -33,7 +33,7 @@ by following names.
 In other words, you can initialize Iyzipay object like following:
 
 ```js
-   var iyzipay = new Iyzipay();
+var iyzipay = new Iyzipay();
 ```
 
 ### Sample Usage
