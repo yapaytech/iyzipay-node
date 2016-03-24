@@ -35,7 +35,7 @@ describe('Iyzipay', function () {
                 secretKey: 'secretKey'
 
             });
-        }, /uri cannot be emtpy/);
+        }, /uri cannot be empty/);
         done();
     });
 
@@ -46,7 +46,7 @@ describe('Iyzipay', function () {
                 secretKey: 'secretKey'
 
             });
-        }, /apiKey cannot be emtpy/);
+        }, /apiKey cannot be empty/);
         done();
     });
 
@@ -57,7 +57,7 @@ describe('Iyzipay', function () {
                 apiKey: 'apiKey'
 
             });
-        }, /secretKey cannot be emtpy/);
+        }, /secretKey cannot be empty/);
         done();
     });
 });
