@@ -183,10 +183,10 @@ You can see further examples in `test/samples` folder, and run them by `npm run-
 * connectRefund
     * [`create({params})`](#create-connectrefund)
     
-* connectThreeDsAuth
+* connectThreeDSAuth
     * [`create({params})`](#create-connectthreedsauth)
     
-* connectThreeDsInitialize
+* connectThreeDSInitialize
     * [`create({params})`](#create-connecthreedsinitialize)
     
 * crossBookingFromSubMerchant
@@ -226,11 +226,11 @@ You can see further examples in `test/samples` folder, and run them by `npm run-
     * [`update({params})`](#update-submerchant)
     * [`retrieve({params})`](#retrieve-submerchant)
     
-* threeDsAuth
+* threeDSAuth
     * [`create({params})`](#create-threedsauth)
     * [`retrieve({params})`](#retrieve-threedsauth)
     
-* threeDsInitialize
+* threeDSInitialize
     * [`create({params})`](#create-threedsinitialize)
 
         
