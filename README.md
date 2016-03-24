@@ -4,11 +4,11 @@
 
 You can sign up for an iyzico account at [https://iyzico.com](https://iyzico.com)
 
-## Installation
+# Installation
 
 `npm install iyzipay`
 
-## Usage
+# Usage
 
 ### Initialization
 
@@ -131,7 +131,13 @@ iyzipay.paymentAuth.create(paymentAuth, function (err, result) {
 
 You can see further examples in `test/samples` folder, and run them by `npm run-script samples`
 
-## Available Resources and Methods
+### Testing
+
+You need to have [mocha](https://mochajs.org/) installed on your machine in order to run tests.
+ 
+`npm test`
+
+# Available Resources and Methods
 
 * approval
     * [`create({params})`](#create-approval)
@@ -235,11 +241,6 @@ You can see further examples in `test/samples` folder, and run them by `npm run-
 * threeDSInitialize
     * [`create({params})`](#create-threedsinitialize)
 
-        
-### Create Approval
+# Author
 
-## Testing
-
-You need to have [mocha](https://mochajs.org/) installed on your machine in order to run tests.
- 
-`npm test`
+Originally by [Huseyin Babal](https://github.com/huseyinbabal) (huseyinbabal88@gmail.com). Now officially maintained by iyzico.
