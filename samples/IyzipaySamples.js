@@ -28,7 +28,7 @@ describe('Iyzipay API Test', function () {
             iyzipay.approval.create({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: "123456789",
-                paymentTransactionId: "1546"
+                paymentTransactionId: "1"
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -47,7 +47,21 @@ describe('Iyzipay API Test', function () {
         })
     });
 
-    describe('Bkm', function () {
+    describe('BinNumber', function () {
+
+        it('should retrieve bin number', function (done) {
+            iyzipay.binNumber.retrieve({
+                locale: Iyzipay.LOCALE.TR,
+                conversationId: '123456',
+                binNumber: '454671'
+            }, function (err, result) {
+                console.log(err, result);
+                done();
+            });
+        });
+    });
+
+    describe('BKM', function () {
 
         it('should initialize bkm express', function (done) {
             var bkmInitRequest = {
@@ -56,7 +70,6 @@ describe('Iyzipay API Test', function () {
                 price: '1.0',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-                paymentSource: 'test source_sor',
                 callbackUrl: 'https://www.merchant.com/callback',
                 buyer: {
                     id: 'BY789',
@@ -139,20 +152,6 @@ describe('Iyzipay API Test', function () {
         })
     });
 
-    describe('BinNumber', function () {
-
-        it('should retrieve bin number', function (done) {
-            iyzipay.binNumber.retrieve({
-                binNumber: '454671',
-                conversationId: '123456789',
-                locale: Iyzipay.LOCALE.TR
-            }, function (err, result) {
-                console.log(err, result);
-                done();
-            });
-        });
-    });
-
     describe('Cancel', function () {
 
         it('should cancel payment', function (done) {
@@ -215,7 +214,7 @@ describe('Iyzipay API Test', function () {
                 cardUserKey: 'card user key',
                 cardToken: 'card token'
             }, function (err, result) {
-                console.log(result);
+                console.log(err, result);
                 done();
             });
         });
@@ -226,7 +225,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 cardUserKey: 'card user key'
             }, function (err, result) {
-                console.log(result);
+                console.log(err, result);
                 done();
             });
         })
@@ -242,7 +241,6 @@ describe('Iyzipay API Test', function () {
                 paidPrice: '1.2',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-                paymentSource: 'test source_sor',
                 callbackUrl: 'https://www.merchant.com/callback',
                 buyer: {
                     id: 'BY789',
@@ -325,7 +323,7 @@ describe('Iyzipay API Test', function () {
         })
     });
 
-    describe('Connect Bkm', function () {
+    describe('Connect BKM', function () {
 
         it('should initialize connect bkm express', function (done) {
             iyzipay.connectBkmInitialize.create({
@@ -352,7 +350,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 token: 'token'
             }, function (err, result) {
-                console.log(result);
+                console.log(err, result);
                 done();
             });
         });
@@ -425,7 +423,7 @@ describe('Iyzipay API Test', function () {
     describe('Connect Payment Pre Auth', function () {
 
         it('should pay with card', function (done) {
-            iyzipay.connectPaymentAuth.create({
+            iyzipay.connectPaymentPreAuth.create({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
@@ -450,7 +448,7 @@ describe('Iyzipay API Test', function () {
         });
 
         it('should pay with card token', function (done) {
-            iyzipay.connectPaymentAuth.create({
+            iyzipay.connectPaymentPreAuth.create({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
@@ -486,7 +484,7 @@ describe('Iyzipay API Test', function () {
         });
     });
 
-    describe('Connect Three DS', function () {
+    describe('Connect ThreeDS', function () {
 
         it('should initialize threeds with card', function (done) {
             iyzipay.connectThreeDSInitialize.create({
@@ -781,8 +779,8 @@ describe('Iyzipay API Test', function () {
                 paidPrice: '1.1',
                 installment: '1',
                 basketId: 'B67832',
-                paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-                paymentChannel: Iyzipay.PAYMENT_CHANNEL.SUBSCRIPTION,
+                paymentGroup: Iyzipay.PAYMENT_GROUP.LISTING,
+                paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -827,9 +825,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Collectibles',
                         category2: 'Accessories',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.3',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.27'
+                        price: '0.3'
                     },
                     {
                         id: 'BI102',
@@ -837,9 +833,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Game',
                         category2: 'Online Game Items',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL,
-                        price: '0.5',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.42'
+                        price: '0.5'
                     },
                     {
                         id: 'BI103',
@@ -847,9 +841,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Electronics',
                         category2: 'Usb / Cable',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.2',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.18'
+                        price: '0.2'
                     }
                 ]
             };
@@ -971,7 +963,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-                paymentChannel: Iyzipay.PAYMENT_CHANNEL.SUBSCRIPTION,
+                paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -1263,7 +1255,7 @@ describe('Iyzipay API Test', function () {
         });
     });
 
-    describe('Three DS', function () {
+    describe('ThreeDS', function () {
 
         it('should initialize threeds payment with physical and virtual item for market place', function (done) {
             var threeDSRequest = {
