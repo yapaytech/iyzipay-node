@@ -1,5 +1,5 @@
 var TestUtils = module.exports = {
-    prepareInstallmentDetails: function() {
+    prepareInstallmentDetails: function () {
         return [
             TestUtils.isbankInstallmentDetails(),
             TestUtils.finansbankInstallmentDetails(),
@@ -9,7 +9,7 @@ var TestUtils = module.exports = {
             TestUtils.halkbankInstallmentDetails()
         ];
     },
-    bankInstallmentDetails: function(bankId) {
+    bankInstallmentDetails: function (bankId) {
         return {
             bankId: bankId,
             installmentPrices: [
@@ -36,22 +36,22 @@ var TestUtils = module.exports = {
             ]
         };
     },
-    isbankInstallmentDetails: function() {
+    isbankInstallmentDetails: function () {
         return TestUtils.bankInstallmentDetails(64);
     },
-    finansbankInstallmentDetails: function() {
+    finansbankInstallmentDetails: function () {
         return TestUtils.bankInstallmentDetails(111);
     },
-    akbankInstallmentDetails: function() {
+    akbankInstallmentDetails: function () {
         return TestUtils.bankInstallmentDetails(46);
     },
-    ykbInstallmentDetails: function() {
+    ykbInstallmentDetails: function () {
         return TestUtils.bankInstallmentDetails(67);
     },
-    denizbankInstallmentDetails: function() {
+    denizbankInstallmentDetails: function () {
         return TestUtils.bankInstallmentDetails(134);
     },
-    halkbankInstallmentDetails: function() {
+    halkbankInstallmentDetails: function () {
         return TestUtils.bankInstallmentDetails(12);
     }
 };

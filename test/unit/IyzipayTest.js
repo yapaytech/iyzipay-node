@@ -2,9 +2,9 @@ var assert = require('assert'),
     should = require('should'),
     Iyzipay = require('../../lib/Iyzipay');
 
-describe('Iyzipay', function() {
+describe('Iyzipay', function () {
 
-    it('should initialize iyzipay via config', function(done) {
+    it('should initialize iyzipay via config', function (done) {
         var iyzipay = new Iyzipay({
             uri: 'http://uri',
             apiKey: 'apiKey',
@@ -14,7 +14,7 @@ describe('Iyzipay', function() {
         done();
     });
 
-    it('should initialize iyzipay via environment variables without config', function(done) {
+    it('should initialize iyzipay via environment variables without config', function (done) {
         process.env['IYZIPAY_URI'] = 'http://uri';
         process.env['IYZIPAY_API_KEY'] = 'apiKey';
         process.env['IYZIPAY_SECRET_KEY'] = 'secretKey';
@@ -28,7 +28,7 @@ describe('Iyzipay', function() {
         done();
     });
 
-    it('should throw exception on empty "uri"', function(done) {
+    it('should throw exception on empty "uri"', function (done) {
         assert.throws(function () {
             var iyzipay = new Iyzipay({
                 apiKey: 'apiKey',
@@ -39,7 +39,7 @@ describe('Iyzipay', function() {
         done();
     });
 
-    it('should throw exception on empty "apiKey"', function(done) {
+    it('should throw exception on empty "apiKey"', function (done) {
         assert.throws(function () {
             var iyzipay = new Iyzipay({
                 uri: 'http://uri',
@@ -50,7 +50,7 @@ describe('Iyzipay', function() {
         done();
     });
 
-    it('should throw exception on empty "secretKey"', function(done) {
+    it('should throw exception on empty "secretKey"', function (done) {
         assert.throws(function () {
             var iyzipay = new Iyzipay({
                 uri: 'http://uri',
@@ -60,6 +60,4 @@ describe('Iyzipay', function() {
         }, /secretKey cannot be emtpy/);
         done();
     });
-
-
 });

@@ -13,6 +13,7 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('ApiTest', function () {
+
         it('should test api', function (done) {
             iyzipay.apiTest.retrieve({}, function (err, result) {
                 console.log(err, result);
@@ -153,6 +154,7 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('Cancel', function () {
+
         it('should cancel payment', function (done) {
             iyzipay.cancel.create({
                 conversationId: '123456789',
@@ -357,6 +359,7 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('Connect Cancel', function () {
+
         it('should cancel payment', function (done) {
             iyzipay.connectCancel.create({
                 conversationId: '123456789',
@@ -485,8 +488,8 @@ describe('Iyzipay API Test', function () {
 
     describe('Connect Three DS', function () {
 
-        it('should initialize three ds with card', function (done) {
-            iyzipay.connectThreeDsInitialize.create({
+        it('should initialize threeds with card', function (done) {
+            iyzipay.connectThreeDSInitialize.create({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
@@ -511,8 +514,8 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should initialize three ds with card token', function (done) {
-            iyzipay.connectThreeDsInitialize.create({
+        it('should initialize threeds with card token', function (done) {
+            iyzipay.connectThreeDSInitialize.create({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
@@ -533,8 +536,8 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should auth three ds', function (done) {
-            iyzipay.connectThreeDsAuth.create({
+        it('should auth threeds', function (done) {
+            iyzipay.connectThreeDSAuth.create({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 paymentId: '1'
@@ -601,7 +604,8 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('Payment Auth', function () {
-        it('should create payment with pyshical and virtual item for standard merchant', function (done) {
+
+        it('should create payment with physical and virtual item for standard merchant', function (done) {
             var paymentAuth = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -682,7 +686,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should create payment with pyshical and virtual item for market place', function (done) {
+        it('should create payment with physical and virtual item for market place', function (done) {
             var paymentAuth = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -769,7 +773,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should create payment with pyshical and virtual item for listing or subscription', function (done) {
+        it('should create payment with physical and virtual item for listing or subscription', function (done) {
             var paymentAuth = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -870,7 +874,8 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('Payment Pre Auth', function () {
-        it('should create payment with pyshical and virtual item for market place', function (done) {
+
+        it('should create payment with physical and virtual item for market place', function (done) {
             var paymentPreAuth = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -957,7 +962,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should create payment with pyshical and virtual item for listing or subscription', function (done) {
+        it('should create payment with physical and virtual item for listing or subscription', function (done) {
             var paymentPreAuth = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1058,6 +1063,7 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('Payment Post Auth', function () {
+
         it('should post auth', function (done) {
             iyzipay.paymentPostAuth.create({
                 locale: Iyzipay.LOCALE.TR,
@@ -1072,6 +1078,7 @@ describe('Iyzipay API Test', function () {
     });
 
     describe('Refund', function () {
+
         it('should refund', function (done) {
             iyzipay.refund.create({
                 locale: Iyzipay.LOCALE.TR,
@@ -1146,7 +1153,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should create private sub merchant', function(done) {
+        it('should create private sub merchant', function (done) {
             iyzipay.subMerchant.create({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1166,7 +1173,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should create limited company sub merchant', function(done) {
+        it('should create limited company sub merchant', function (done) {
             iyzipay.subMerchant.create({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1185,7 +1192,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should update personal sub merchant', function(done) {
+        it('should update personal sub merchant', function (done) {
             iyzipay.subMerchant.update({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1205,7 +1212,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should update personal sub merchant', function(done) {
+        it('should update personal sub merchant', function (done) {
             iyzipay.subMerchant.update({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1225,7 +1232,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should update limited company sub merchant', function(done) {
+        it('should update limited company sub merchant', function (done) {
             iyzipay.subMerchant.update({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1244,7 +1251,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should retrieve sub merchant', function(done) {
+        it('should retrieve sub merchant', function (done) {
             iyzipay.subMerchant.retrieve({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -1258,8 +1265,8 @@ describe('Iyzipay API Test', function () {
 
     describe('Three DS', function () {
 
-        it('should initialize three ds payment with physical and virtual item for market place', function (done) {
-            var threeDsRequest = {
+        it('should initialize threeds payment with physical and virtual item for market place', function (done) {
+            var threeDSRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1.0',
@@ -1340,14 +1347,14 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.threeDsInitialize.create(threeDsRequest, function (err, result) {
+            iyzipay.threeDSInitialize.create(threeDSRequest, function (err, result) {
                 console.log(err, result);
                 done();
             });
         });
 
-        it('should initialize three ds payment with physical and virtual item for listing and subscription', function (done) {
-            var threeDsRequest = {
+        it('should initialize threeds payment with physical and virtual item for listing and subscription', function (done) {
+            var threeDSRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1.0',
@@ -1428,14 +1435,14 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.threeDsInitialize.create(threeDsRequest, function (err, result) {
+            iyzipay.threeDSInitialize.create(threeDSRequest, function (err, result) {
                 console.log(err, result);
                 done();
             });
         });
 
-        it('should auth three ds', function (done) {
-            iyzipay.threeDsAuth.create({
+        it('should auth threeds', function (done) {
+            iyzipay.threeDSAuth.create({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 paymentId: '1',
@@ -1446,8 +1453,8 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should retrieve payment', function(done) {
-            iyzipay.threeDsAuth.retrieve({
+        it('should retrieve payment', function (done) {
+            iyzipay.threeDSAuth.retrieve({
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 paymentId: '1',
