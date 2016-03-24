@@ -1,8 +1,8 @@
 {
-  "name": "iyzipay-node",
+  "name": "iyzipay",
   "version": "1.0.0",
-  "description": "Node.js client for Iyzipay",
-  "main": "index.js",
+  "description": "iyzipay api node.js client",
+  "main": "lib/Iyzipay.js",
   "scripts": {
     "test": "mocha $(find test -name '*Test.js')",
     "samples": "mocha $(find samples -name '*Samples.js')",
@@ -11,19 +11,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huseyinbabal/iyzipay-node.git"
+    "url": "git+https://github.com/iyzico/iyzipay-node.git"
   },
   "keywords": [
-    "iyzipay",
     "iyzico",
-    "node"
+    "iyzipay",
+    "iyzico.com",
+    "iyzipay php",
+    "iyzipay api",
+    "iyzipay api node client",
+    "iyzipay api node",
+    "payment processing"
   ],
-  "author": "Huseyin BABAL <huseyinbabal88@gmail.com>",
-  "license": "ISC",
+  "author": "iyzico <entegrasyon@iyzico.com> (https://iyzico.com/)",
+  "contributors": [
+    "Huseyin Babal <huseyinbabal88@gmail.com>"
+  ],
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huseyinbabal/iyzipay-node/issues"
+    "url": "https://github.com/iyzico/iyzipay-node/issues"
   },
-  "homepage": "https://github.com/huseyinbabal/iyzipay-node#readme",
+  "homepage": "https://github.com/iyzico/iyzipay-node",
   "dependencies": {
     "request": "^2.69.0"
   },
