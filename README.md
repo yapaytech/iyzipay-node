@@ -1,5 +1,7 @@
 # iyzipay-node
 
+[![Build Status](https://travis-ci.org/iyzico/iyzipay-node.svg?branch=master)](https://travis-ci.org/iyzico/iyzipay-node)
+
 You can sign up for an iyzico account at [https://iyzico.com](https://iyzico.com)
 
 ## Installation
