@@ -61,7 +61,7 @@ describe('Iyzipay API Test', function () {
         });
     });
 
-    describe('BKM', function () {
+    describe('Bkm', function () {
 
         it('should initialize bkm express', function (done) {
             var bkmInitRequest = {
@@ -323,7 +323,7 @@ describe('Iyzipay API Test', function () {
         })
     });
 
-    describe('Connect BKM', function () {
+    describe('Connect Bkm', function () {
 
         it('should initialize connect bkm express', function (done) {
             iyzipay.connectBkmInitialize.create({
