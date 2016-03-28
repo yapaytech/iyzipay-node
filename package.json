@@ -1,6 +1,6 @@
 {
   "name": "iyzipay",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "iyzipay api node.js client",
   "main": "lib/Iyzipay.js",
   "scripts": {
