@@ -135,110 +135,113 @@ You can see further examples in `test/samples` folder, and run them by `npm run-
 ### Testing
 
 You need to have [mocha](https://mochajs.org/) installed on your machine in order to run tests.
- 
+
 `npm test`
 
 # Available Resources and Methods
 
 * approval
     * [`create({params})`](#create-approval)
-    
+
 * binNumber
     * [`retrieve({params})`](#retrieve-binnumber)
-    
+
 * bkmAuth
     * [`retrieve({params})`](#retrieve-bkmauth)
 
 * bkmInitialize
     * [`create({params})`](#create-bkminitialize)
-    
+
 * bouncedBankTransferList
     * [`retrieve({params})`](#retrieve-bouncedbanktransferlist)
-    
+
 * cancel
     * [`create({params})`](#create-cancel)
-    
+
 * card
     * [`create({params})`](#create-card)
     * [`delete({params})`](#delete-card)
 
 * cardList
     * [`retrieve({params})`](#retrieve-cardlist)
-    
+
 * checkoutFormAuth
     * [`retrieve({params})`](#retrieve-checkoutformauth)
-    
+
 * checkoutFormInitialize
     * [`create({params})`](#create-checkoutforminitialize)
- 
+
 * connectBkmAuth
     * [`retrieve({params})`](#retrieve-connectbkmauth)
-    
+
 * connectBkmInitialize
     * [`create({params})`](#create-connectbkminitialize)
-    
+
 * connectCancel
     * [`create({params})`](#create-connectcancel)
-    
+
 * connectPaymentAuth
     * [`create({params})`](#create-connectpaymentauth)
-    
+
 * connectPaymentPostAuth
     * [`create({params})`](#create-connectpaymentpostauth)
-    
+
 * connectPaymentPreAuth
     * [`create({params})`](#create-connectpaymentpreauth)
-    
+
 * connectRefund
     * [`create({params})`](#create-connectrefund)
-    
+
 * connectThreeDSAuth
     * [`create({params})`](#create-connectthreedsauth)
-    
+
 * connectThreeDSInitialize
     * [`create({params})`](#create-connecthreedsinitialize)
-    
+
 * crossBookingFromSubMerchant
     * [`create({params})`](#create-crossbookingfromsubmerchant)
-    
+
 * crossBookingToSubMerchant
     * [`create({params})`](#create-crossbookingtosubmerchant)
-    
+
 * disapproval
     * [`create({params})`](#create-disapproval)
-    
+
 * installmentInfo
     * [`retrieve({params})`](#retrieve-installmentinfo)
-    
+
 * paymentAuth
     * [`create({params})`](#create-paymentauth)
     * [`retrieve({params})`](#retrieve-paymentauth)
-    
+
 * paymentPostAuth
     * [`create({params})`](#create-paymentpostauth)
-    
+
 * paymentPreAuth
     * [`create({params})`](#create-paymentpreauth)
     * [`retrieve({params})`](#retrieve-paymentpreauth)
-    
+
+* paymentPreAuthThreeDSInitialize
+    * [`create({params})`](#create-paymentpreauththreedsinitialize)
+
 * payoutCompletedTransactionList
     * [`retrieve({params})`](#retrieve-payoutcompletedtransactionlist)
-    
+
 * refund
     * [`create({params})`](#create-refund)
-    
+
 * refundChargedFromMerchant
     * [`create({params})`](#create-refundchargedfrommerchant)
-    
+
 * subMerchant
     * [`create({params})`](#create-submerchant)
     * [`update({params})`](#update-submerchant)
     * [`retrieve({params})`](#retrieve-submerchant)
-    
+
 * threeDSAuth
     * [`create({params})`](#create-threedsauth)
     * [`retrieve({params})`](#retrieve-threedsauth)
-    
+
 * threeDSInitialize
     * [`create({params})`](#create-threedsinitialize)
 
