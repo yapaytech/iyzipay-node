@@ -1041,7 +1041,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should initialize threeds payment with physical and virtual items for marketplace', function (done) {
+        it('should initialize threeds payment creation with physical and virtual items for marketplace', function (done) {
             var paymentPreAuthThreeDSInitializeRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
