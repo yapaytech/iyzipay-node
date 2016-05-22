@@ -221,9 +221,6 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
     * [`create({params})`](#create-paymentpreauth)
     * [`retrieve({params})`](#retrieve-paymentpreauth)
 
-* paymentPreAuthThreeDSInitialize
-    * [`create({params})`](#create-paymentpreauththreedsinitialize)
-
 * payoutCompletedTransactionList
     * [`retrieve({params})`](#retrieve-payoutcompletedtransactionlist)
 
@@ -244,6 +241,9 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 
 * threeDSInitialize
     * [`create({params})`](#create-threedsinitialize)
+
+* threeDSInitializePreAuth
+    * [`create({params})`](#create-threedsinitializepreauth)
 
 # Author
 
