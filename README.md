@@ -171,6 +171,9 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 * checkoutFormInitialize
     * [`create({params})`](#create-checkoutforminitialize)
 
+* checkoutFormInitializePreAuth
+    * [`create({params})`](#create-checkoutforminitializepreauth)
+
 * connectBkmAuth
     * [`retrieve({params})`](#retrieve-connectbkmauth)
 
@@ -197,6 +200,9 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 
 * connectThreeDSInitialize
     * [`create({params})`](#create-connecthreedsinitialize)
+
+* connectThreeDSInitializePreAuth
+    * [`create({params})`](#create-connecthreedsinitializepreauth)
 
 * crossBookingFromSubMerchant
     * [`create({params})`](#create-crossbookingfromsubmerchant)
