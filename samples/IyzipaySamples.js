@@ -159,7 +159,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 paymentId: '1',
-                ip: '127.0.0.1'
+                ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -363,7 +363,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
                 paymentId: '1',
-                ip: '127.0.0.1'
+                ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -379,7 +379,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
                 buyerId: 'B2323',
-                buyerIp: '127.0.0.1',
+                buyerIp: '85.34.78.112',
                 connectorName: 'connector name',
                 installment: '1',
                 paidPrice: '1.0',
@@ -404,7 +404,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
                 buyerId: 'B2323',
-                buyerIp: '127.0.0.1',
+                buyerIp: '85.34.78.112',
                 connectorName: 'connector name',
                 installment: '1',
                 paidPrice: '1.0',
@@ -428,7 +428,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
                 buyerId: 'B2323',
-                buyerIp: '127.0.0.1',
+                buyerIp: '85.34.78.112',
                 connectorName: 'connector name',
                 installment: '1',
                 paidPrice: '1.0',
@@ -453,7 +453,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
                 buyerId: 'B2323',
-                buyerIp: '127.0.0.1',
+                buyerIp: '85.34.78.112',
                 connectorName: 'connector name',
                 installment: '1',
                 paidPrice: '1.0',
@@ -476,7 +476,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 paymentTransactionId: '1',
                 price: '1.0',
-                ip: '127.0.0.1'
+                ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -492,7 +492,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
                 buyerId: 'B2323',
-                buyerIp: '127.0.0.1',
+                buyerIp: '85.34.78.112',
                 connectorName: 'connector name',
                 installment: '1',
                 paidPrice: '1.0',
@@ -518,7 +518,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 buyerEmail: 'email@email.com',
                 buyerId: 'B2323',
-                buyerIp: '127.0.0.1',
+                buyerIp: '85.34.78.112',
                 connectorName: 'connector name',
                 installment: '1',
                 paidPrice: '1.0',
@@ -1062,7 +1062,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 paymentId: '1',
                 paidPrice: '0.6',
-                ip: '127.0.0.1'
+                ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1078,7 +1078,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 paymentTransactionId: '1',
                 price: '0.1',
-                ip: '127.0.0.1'
+                ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1091,7 +1091,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 paymentTransactionId: '1',
                 price: '0.1',
-                ip: '127.0.0.1'
+                ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
                 done();
