@@ -19,7 +19,7 @@ var Iyzipay = require('iyzipay');
 var iyzipay = new Iyzipay({
     apiKey: 'your api key',
     secretKey: 'your secret key',
-    uri: 'https://stg.iyzipay.com'
+    uri: 'https://sandbox-api.iyzipay.com'
 });
 ```
 
@@ -47,7 +47,7 @@ var Iyzipay = require('iyzipay');
 var iyzipay = new Iyzipay({
     apiKey: 'your api key',
     secretKey: 'your secret key',
-    uri: 'https://stg.iyzipay.com'
+    uri: 'https://sandbox-api.iyzipay.com'
 });
 
 var paymentAuth = {
