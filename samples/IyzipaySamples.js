@@ -239,6 +239,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.2',
+                currency: Iyzipay.CURRENCY.TRY,
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 callbackUrl: 'https://www.merchant.com/callback',
@@ -384,6 +385,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 paidPrice: '1.0',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -409,6 +411,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 paidPrice: '1.0',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 paymentCard: {
                     cardToken: 'card token',
                     cardUserKey: 'card user key'
@@ -433,6 +436,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 paidPrice: '1.0',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -458,6 +462,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 paidPrice: '1.0',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 paymentCard: {
                     cardToken: 'card token',
                     cardUserKey: 'card user key'
@@ -476,6 +481,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 paymentTransactionId: '1',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
@@ -497,6 +503,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 paidPrice: '1.0',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 callbackUrl: 'https://www.merchant.com/callback',
                 paymentCard: {
                     cardHolderName: 'John Doe',
@@ -523,6 +530,7 @@ describe('Iyzipay API Test', function () {
                 installment: '1',
                 paidPrice: '1.0',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 callbackUrl: 'https://www.merchant.com/callback',
                 paymentCard: {
                     cardToken: 'card token',
@@ -554,6 +562,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 subMerchantKey: 'sub merchant key',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 reason: 'reason text'
             }, function (err, result) {
                 console.log(err, result);
@@ -567,6 +576,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 subMerchantKey: 'sub merchant key',
                 price: '1.0',
+                currency: Iyzipay.CURRENCY.TRY,
                 reason: 'reason text'
             }, function (err, result) {
                 console.log(err, result);
@@ -609,6 +619,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: 1,
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
                 basketId: 'B67832',
@@ -690,6 +701,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
@@ -777,6 +789,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.LISTING,
@@ -873,6 +886,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
@@ -960,6 +974,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
@@ -1062,6 +1077,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 paymentId: '1',
                 paidPrice: '0.6',
+                currency: Iyzipay.CURRENCY.TRY,
                 ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
@@ -1078,6 +1094,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 paymentTransactionId: '1',
                 price: '0.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
@@ -1091,6 +1108,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 paymentTransactionId: '1',
                 price: '0.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 ip: '85.34.78.112'
             }, function (err, result) {
                 console.log(err, result);
@@ -1139,7 +1157,8 @@ describe('Iyzipay API Test', function () {
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890'
+                identityNumber: '1234567890',
+                currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1159,7 +1178,8 @@ describe('Iyzipay API Test', function () {
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890'
+                identityNumber: '1234567890',
+                currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1178,7 +1198,8 @@ describe('Iyzipay API Test', function () {
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
-                iban: 'TR180006200119000006672315'
+                iban: 'TR180006200119000006672315',
+                currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1198,7 +1219,8 @@ describe('Iyzipay API Test', function () {
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890'
+                identityNumber: '1234567890',
+                currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1218,7 +1240,8 @@ describe('Iyzipay API Test', function () {
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890'
+                identityNumber: '1234567890',
+                currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1237,7 +1260,8 @@ describe('Iyzipay API Test', function () {
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
-                iban: 'TR180006200119000006672315'
+                iban: 'TR180006200119000006672315',
+                currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -1264,6 +1288,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
@@ -1352,6 +1377,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
@@ -1440,6 +1466,7 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 price: '1.0',
                 paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
