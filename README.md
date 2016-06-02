@@ -55,6 +55,7 @@ var paymentAuth = {
     conversationId: '123456789',
     price: '1.0',
     paidPrice: '1.1',
+    currency: Iyzipay.CURRENCY.TRY,
     installment: 1,
     paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
     basketId: 'B67832',
