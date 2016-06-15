@@ -92,6 +92,12 @@ describe('Iyzipay', function () {
         done();
     });
 
+    it('should not eliminate leading zero containing only one zero', function (done) {
+        var price = utils.formatPrice('22.00');
+        price.should.be.equal('22.0');
+        done();
+    });
+
     it('should not eliminate zeros in floating value', function (done) {
         var price = utils.formatPrice('23.00450067');
         price.should.be.equal('23.00450067');
