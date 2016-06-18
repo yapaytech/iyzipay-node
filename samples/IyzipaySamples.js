@@ -1573,4 +1573,98 @@ describe('Iyzipay API Test', function () {
             });
         });
     });
+    
+    describe('Pecco', function () {
+
+        it('should initialize pecco', function (done) {
+            var peccoInitRequest = {
+                locale: Iyzipay.LOCALE.TR,
+                conversationId: '123456789',
+                price: '1.0',
+                paidPrice: '1.2',
+                currency: Iyzipay.CURRENCY.IRR,
+                basketId: 'B67832',
+                paymentGroup: "PRODUCT",
+                callbackUrl: 'https://www.merchant.com/callback',
+                buyer: {
+                    id: 'BY789',
+                    name: 'John',
+                    surname: 'Doe',
+                    gsmNumber: '+905350000000',
+                    email: 'email@email.com',
+                    identityNumber: '74300864791',
+                    lastLoginDate: '2015-10-05 12:43:35',
+                    registrationDate: '2013-04-21 15:12:09',
+                    registrationAddress: 'Address',
+                    ip: '85.34.78.112',
+                    city: 'Istanbul',
+                    country: 'Turkey',
+                    zipCode: '34732'
+                },
+                shippingAddress: {
+                    contactName: 'Jane Doe',
+                    city: 'Istanbul',
+                    country: 'Turkey',
+                    address: 'Address',
+                    zipCode: '34742'
+                },
+                billingAddress: {
+                    contactName: 'Jane Doe',
+                    city: 'Istanbul',
+                    country: 'Turkey',
+                    address: 'Address',
+                    zipCode: '34742'
+                },
+                basketItems: [
+                    {
+                        id: 'BI101',
+                        name: 'Binocular',
+                        category1: 'Collectibles',
+                        category2: 'Accessories',
+                        itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
+                        price: '0.3',
+                        subMerchantKey: 'sub merchant key',
+                        subMerchantPrice: '0.27'
+                    },
+                    {
+                        id: 'BI102',
+                        name: 'Game code',
+                        category1: 'Game',
+                        category2: 'Online Game Items',
+                        itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL,
+                        price: '0.5',
+                        subMerchantKey: 'sub merchant key',
+                        subMerchantPrice: '0.42'
+                    },
+                    {
+                        id: 'BI103',
+                        name: 'Usb',
+                        category1: 'Electronics',
+                        category2: 'Usb / Cable',
+                        itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
+                        price: '0.2',
+                        subMerchantKey: 'sub merchant key',
+                        subMerchantPrice: '0.18'
+                    }
+                ]
+            };
+            
+            iyzipay.peccoInitialize.create(peccoInitRequest, function (err, result) {
+                console.log(err, result);
+                done();
+            });
+        });
+
+        
+        it('should auth pecco payment', function (done) {
+            iyzipay.peccoPayment.create({
+                locale: Iyzipay.LOCALE.TR,
+                conversationId: '123456789',
+                token: 'token'
+            }, function (err, result) {
+                console.log(err, result);
+                done();
+            });
+        })
+    });
 });
