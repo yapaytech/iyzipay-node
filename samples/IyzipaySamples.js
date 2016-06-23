@@ -1573,7 +1573,7 @@ describe('Iyzipay API Test', function () {
             });
         });
     });
-    
+
     describe('Pecco', function () {
 
         it('should initialize pecco', function (done) {
@@ -1648,14 +1648,14 @@ describe('Iyzipay API Test', function () {
                     }
                 ]
             };
-            
+
             iyzipay.peccoInitialize.create(peccoInitRequest, function (err, result) {
                 console.log(err, result);
                 done();
             });
         });
 
-        
+
         it('should auth pecco payment', function (done) {
             iyzipay.peccoPayment.create({
                 locale: Iyzipay.LOCALE.TR,
