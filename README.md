@@ -144,10 +144,34 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 * approval
     * [`create({params})`](#create-approval)
 
+* basicBkm
+    * [`retrieve({params})`](#retrieve-basicbkm)
+
+* basicBkmInitialize
+    * [`create({params})`](#create-basicbkminitialize)
+
+* basicPayment
+    * [`create({params})`](#create-basicpayment)
+
+* basicPaymentPostAuth
+    * [`create({params})`](#create-basicpaymentpostauth)
+
+* basicPaymentPreAuth
+    * [`create({params})`](#create-basicpaymentpreauth)
+
+* basicThreedsInitialize
+    * [`create({params})`](#create-basicthreedsinitialize)
+
+* basicThreedsInitializePreAuth
+    * [`create({params})`](#create-basicthreedsinitializepreauth)
+
+* basicThreedsPayment
+    * [`create({params})`](#create-basicthreedspayment)
+
 * binNumber
     * [`retrieve({params})`](#retrieve-binnumber)
 
-* bkmAuth
+* bkm
     * [`retrieve({params})`](#retrieve-bkmauth)
 
 * bkmInitialize
@@ -166,44 +190,14 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 * cardList
     * [`retrieve({params})`](#retrieve-cardlist)
 
-* checkoutFormAuth
-    * [`retrieve({params})`](#retrieve-checkoutformauth)
+* checkoutForm
+    * [`retrieve({params})`](#retrieve-checkoutform)
 
 * checkoutFormInitialize
     * [`create({params})`](#create-checkoutforminitialize)
 
 * checkoutFormInitializePreAuth
     * [`create({params})`](#create-checkoutforminitializepreauth)
-
-* connectBkmAuth
-    * [`retrieve({params})`](#retrieve-connectbkmauth)
-
-* connectBkmInitialize
-    * [`create({params})`](#create-connectbkminitialize)
-
-* connectCancel
-    * [`create({params})`](#create-connectcancel)
-
-* connectPaymentAuth
-    * [`create({params})`](#create-connectpaymentauth)
-
-* connectPaymentPostAuth
-    * [`create({params})`](#create-connectpaymentpostauth)
-
-* connectPaymentPreAuth
-    * [`create({params})`](#create-connectpaymentpreauth)
-
-* connectRefund
-    * [`create({params})`](#create-connectrefund)
-
-* connectThreeDSAuth
-    * [`create({params})`](#create-connectthreedsauth)
-
-* connectThreeDSInitialize
-    * [`create({params})`](#create-connecthreedsinitialize)
-
-* connectThreeDSInitializePreAuth
-    * [`create({params})`](#create-connecthreedsinitializepreauth)
 
 * crossBookingFromSubMerchant
     * [`create({params})`](#create-crossbookingfromsubmerchant)
@@ -214,12 +208,15 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 * disapproval
     * [`create({params})`](#create-disapproval)
 
+* installmentHtml
+    * [`retrieve({params})`](#retrieve-installmenthtml)
+
 * installmentInfo
     * [`retrieve({params})`](#retrieve-installmentinfo)
 
-* paymentAuth
-    * [`create({params})`](#create-paymentauth)
-    * [`retrieve({params})`](#retrieve-paymentauth)
+* payment
+    * [`create({params})`](#create-payment)
+    * [`retrieve({params})`](#retrieve-payment)
 
 * paymentPostAuth
     * [`create({params})`](#create-paymentpostauth)
@@ -230,6 +227,12 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
 
 * payoutCompletedTransactionList
     * [`retrieve({params})`](#retrieve-payoutcompletedtransactionlist)
+
+* peccoInitialize
+    * [`create({params})`](#create-peccoinitialize)
+
+* peccoPayment
+    * [`create({params})`](#create-peccopayment)
 
 * refund
     * [`create({params})`](#create-refund)
@@ -242,15 +245,15 @@ You need to have [mocha](https://mochajs.org/) installed on your machine in orde
     * [`update({params})`](#update-submerchant)
     * [`retrieve({params})`](#retrieve-submerchant)
 
-* threeDSAuth
-    * [`create({params})`](#create-threedsauth)
-    * [`retrieve({params})`](#retrieve-threedsauth)
-
-* threeDSInitialize
+* threedsInitialize
     * [`create({params})`](#create-threedsinitialize)
 
-* threeDSInitializePreAuth
+* threedsInitializePreAuth
     * [`create({params})`](#create-threedsinitializepreauth)
+
+* threedsPayment
+    * [`create({params})`](#create-threedspayment)
+    * [`retrieve({params})`](#retrieve-threedspayment)
 
 # Author
 
