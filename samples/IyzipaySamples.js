@@ -585,7 +585,8 @@ describe('Iyzipay API Test', function () {
                         subMerchantKey: 'sub merchant key',
                         subMerchantPrice: '0.18'
                     }
-                ]
+                ],
+                enabledInstallments: [2,3,4,6,9]
             };
 
             iyzipay.checkoutFormInitializePreAuth.create(checkoutFormInitRequest, function (err, result) {
