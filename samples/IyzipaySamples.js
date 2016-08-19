@@ -1,7 +1,6 @@
 var should = require('should'),
     assert = require('assert'),
-    Iyzipay = require('../lib/Iyzipay'),
-    TestUtils = require('../test/utils/TestUtils');
+    Iyzipay = require('../lib/Iyzipay');
 
 describe('Iyzipay API Test', function () {
 
@@ -36,7 +35,7 @@ describe('Iyzipay API Test', function () {
         });
     });
 
-    describe('DisApproval', function () {
+    describe('Disapproval', function () {
 
         it('should disapprove payment item', function (done) {
             iyzipay.disapproval.create({
@@ -52,11 +51,11 @@ describe('Iyzipay API Test', function () {
 
     describe('BinNumber', function () {
 
-        it('should retrieve bin number', function (done) {
+        it('should retrieve bin', function (done) {
             iyzipay.binNumber.retrieve({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456',
-                binNumber: '454671'
+                binNumber: '554960'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -66,15 +65,14 @@ describe('Iyzipay API Test', function () {
 
     describe('Bkm', function () {
 
-        it('should initialize bkm express', function (done) {
+        it('should initialize bkm', function (done) {
             var bkmInitRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                price: '1.0',
+                price: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 callbackUrl: 'https://www.merchant.com/callback',
-
                 buyer: {
                     id: 'BY789',
                     name: 'John',
@@ -84,7 +82,7 @@ describe('Iyzipay API Test', function () {
                     identityNumber: '74300864791',
                     lastLoginDate: '2015-10-05 12:43:35',
                     registrationDate: '2013-04-21 15:12:09',
-                    registrationAddress: 'Address',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     ip: '85.34.78.112',
                     city: 'Istanbul',
                     country: 'Turkey',
@@ -94,14 +92,14 @@ describe('Iyzipay API Test', function () {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 basketItems: [
@@ -111,9 +109,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Collectibles',
                         category2: 'Accessories',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.3',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.27'
+                        price: '0.3'
                     },
                     {
                         id: 'BI102',
@@ -121,9 +117,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Game',
                         category2: 'Online Game Items',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL,
-                        price: '0.5',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.42'
+                        price: '0.5'
                     },
                     {
                         id: 'BI103',
@@ -131,9 +125,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Electronics',
                         category2: 'Usb / Cable',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.2',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.18'
+                        price: '0.2'
                     }
                 ]
             };
@@ -144,7 +136,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should retrieve bkm auth', function (done) {
+        it('should retrieve bkm result', function (done) {
             iyzipay.bkm.retrieve({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -160,8 +152,8 @@ describe('Iyzipay API Test', function () {
 
         it('should cancel payment', function (done) {
             iyzipay.cancel.create({
-                conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
+                conversationId: '123456789',
                 paymentId: '1',
                 ip: '85.34.78.112'
             }, function (err, result) {
@@ -197,7 +189,6 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 cardUserKey: 'card user key',
-                externalId: 'external id',
                 card: {
                     cardAlias: 'card alias',
                     cardHolderName: 'John Doe',
@@ -215,8 +206,8 @@ describe('Iyzipay API Test', function () {
             iyzipay.card.delete({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                cardUserKey: 'card user key',
-                cardToken: 'card token'
+                cardToken: 'card token',
+                cardUserKey: 'card user key'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -241,14 +232,13 @@ describe('Iyzipay API Test', function () {
             var checkoutFormInitRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                price: '1.0',
+                price: '1',
                 paidPrice: '1.2',
                 currency: Iyzipay.CURRENCY.TRY,
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 callbackUrl: 'https://www.merchant.com/callback',
-                enabledInstallments: [1, 2, 3, 6, 9],
-
+                enabledInstallments: [2, 3, 6, 9],
                 buyer: {
                     id: 'BY789',
                     name: 'John',
@@ -258,7 +248,7 @@ describe('Iyzipay API Test', function () {
                     identityNumber: '74300864791',
                     lastLoginDate: '2015-10-05 12:43:35',
                     registrationDate: '2013-04-21 15:12:09',
-                    registrationAddress: 'Address',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     ip: '85.34.78.112',
                     city: 'Istanbul',
                     country: 'Turkey',
@@ -268,14 +258,14 @@ describe('Iyzipay API Test', function () {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 basketItems: [
@@ -285,9 +275,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Collectibles',
                         category2: 'Accessories',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.3',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.27'
+                        price: '0.3'
                     },
                     {
                         id: 'BI102',
@@ -295,9 +283,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Game',
                         category2: 'Online Game Items',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL,
-                        price: '0.5',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.42'
+                        price: '0.5'
                     },
                     {
                         id: 'BI103',
@@ -305,9 +291,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Electronics',
                         category2: 'Usb / Cable',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.2',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.18'
+                        price: '0.2'
                     }
                 ]
             };
@@ -318,7 +302,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should retrieve checkout form auth', function (done) {
+        it('should retrieve checkout form result', function (done) {
             iyzipay.checkoutForm.retrieve({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -334,10 +318,10 @@ describe('Iyzipay API Test', function () {
 
         it('should retrieve installment info', function (done) {
             iyzipay.installmentInfo.retrieve({
-                conversationId: '123456789',
                 locale: Iyzipay.LOCALE.TR,
-                binNumber: '454671',
-                price: '1.0'
+                conversationId: '123456789',
+                binNumber: '554960',
+                price: '100'
             }, function (err, result) {
                 console.log(err, result);
                 done();
@@ -351,14 +335,13 @@ describe('Iyzipay API Test', function () {
             var payment = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                price: '1.0',
+                price: '1',
                 paidPrice: '1.1',
                 currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
-
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -376,7 +359,7 @@ describe('Iyzipay API Test', function () {
                     identityNumber: '74300864791',
                     lastLoginDate: '2015-10-05 12:43:35',
                     registrationDate: '2013-04-21 15:12:09',
-                    registrationAddress: 'Address',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     ip: '85.34.78.112',
                     city: 'Istanbul',
                     country: 'Turkey',
@@ -386,14 +369,14 @@ describe('Iyzipay API Test', function () {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 basketItems: [
@@ -434,14 +417,13 @@ describe('Iyzipay API Test', function () {
             var payment = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                price: '1.0',
+                price: '1',
                 paidPrice: '1.1',
                 currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
-
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -459,7 +441,7 @@ describe('Iyzipay API Test', function () {
                     identityNumber: '74300864791',
                     lastLoginDate: '2015-10-05 12:43:35',
                     registrationDate: '2013-04-21 15:12:09',
-                    registrationAddress: 'Address',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     ip: '85.34.78.112',
                     city: 'Istanbul',
                     country: 'Turkey',
@@ -469,14 +451,14 @@ describe('Iyzipay API Test', function () {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 basketItems: [
@@ -519,6 +501,84 @@ describe('Iyzipay API Test', function () {
             });
         });
 
+        it('should create payment with registered card', function (done) {
+            var payment = {
+                locale: Iyzipay.LOCALE.TR,
+                conversationId: '123456789',
+                price: '1',
+                paidPrice: '1.1',
+                currency: Iyzipay.CURRENCY.TRY,
+                installment: '1',
+                basketId: 'B67832',
+                paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
+                paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
+                paymentCard: {
+                    cardUserKey: 'card user key',
+                    cardToken: 'card token'
+                },
+                buyer: {
+                    id: 'BY789',
+                    name: 'John',
+                    surname: 'Doe',
+                    gsmNumber: '+905350000000',
+                    email: 'email@email.com',
+                    identityNumber: '74300864791',
+                    lastLoginDate: '2015-10-05 12:43:35',
+                    registrationDate: '2013-04-21 15:12:09',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
+                    ip: '85.34.78.112',
+                    city: 'Istanbul',
+                    country: 'Turkey',
+                    zipCode: '34732'
+                },
+                shippingAddress: {
+                    contactName: 'Jane Doe',
+                    city: 'Istanbul',
+                    country: 'Turkey',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
+                    zipCode: '34742'
+                },
+                billingAddress: {
+                    contactName: 'Jane Doe',
+                    city: 'Istanbul',
+                    country: 'Turkey',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
+                    zipCode: '34742'
+                },
+                basketItems: [
+                    {
+                        id: 'BI101',
+                        name: 'Binocular',
+                        category1: 'Collectibles',
+                        category2: 'Accessories',
+                        itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
+                        price: '0.3'
+                    },
+                    {
+                        id: 'BI102',
+                        name: 'Game code',
+                        category1: 'Game',
+                        category2: 'Online Game Items',
+                        itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL,
+                        price: '0.5'
+                    },
+                    {
+                        id: 'BI103',
+                        name: 'Usb',
+                        category1: 'Electronics',
+                        category2: 'Usb / Cable',
+                        itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
+                        price: '0.2'
+                    }
+                ]
+            };
+
+            iyzipay.payment.create(payment, function (err, result) {
+                console.log(err, result);
+                done();
+            });
+        });
+
         it('should retrieve payment', function (done) {
             iyzipay.payment.retrieve({
                 locale: Iyzipay.LOCALE.TR,
@@ -539,13 +599,12 @@ describe('Iyzipay API Test', function () {
             var peccoInitRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                price: '1.0',
-                paidPrice: '1.2',
+                price: '100000',
+                paidPrice: '120000',
                 currency: Iyzipay.CURRENCY.IRR,
                 basketId: 'B67832',
                 paymentGroup: "PRODUCT",
                 callbackUrl: 'https://www.merchant.com/callback',
-
                 buyer: {
                     id: 'BY789',
                     name: 'John',
@@ -555,7 +614,7 @@ describe('Iyzipay API Test', function () {
                     identityNumber: '74300864791',
                     lastLoginDate: '2015-10-05 12:43:35',
                     registrationDate: '2013-04-21 15:12:09',
-                    registrationAddress: 'Address',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     ip: '85.34.78.112',
                     city: 'Istanbul',
                     country: 'Turkey',
@@ -565,14 +624,14 @@ describe('Iyzipay API Test', function () {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 basketItems: [
@@ -582,9 +641,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Collectibles',
                         category2: 'Accessories',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.3',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.27'
+                        price: '30000'
                     },
                     {
                         id: 'BI102',
@@ -592,9 +649,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Game',
                         category2: 'Online Game Items',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.VIRTUAL,
-                        price: '0.5',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.42'
+                        price: '50000'
                     },
                     {
                         id: 'BI103',
@@ -602,9 +657,7 @@ describe('Iyzipay API Test', function () {
                         category1: 'Electronics',
                         category2: 'Usb / Cable',
                         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-                        price: '0.2',
-                        subMerchantKey: 'sub merchant key',
-                        subMerchantPrice: '0.18'
+                        price: '20000'
                     }
                 ]
             };
@@ -615,7 +668,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should auth pecco payment', function (done) {
+        it('should create pecco payment', function (done) {
             iyzipay.peccoPayment.create({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -634,7 +687,7 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 paymentTransactionId: '1',
-                price: '0.1',
+                price: '0.5',
                 currency: Iyzipay.CURRENCY.TRY,
                 ip: '85.34.78.112'
             }, function (err, result) {
@@ -808,11 +861,11 @@ describe('Iyzipay API Test', function () {
 
     describe('Threeds', function () {
 
-        it('should initialize threeds payment', function (done) {
+        it('should initialize threeds', function (done) {
             var threedsRequest = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                price: '1.0',
+                price: '1',
                 paidPrice: '1.1',
                 currency: Iyzipay.CURRENCY.TRY,
                 installment: '1',
@@ -820,7 +873,6 @@ describe('Iyzipay API Test', function () {
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
                 callbackUrl: 'https://www.merchant.com/callback',
-
                 paymentCard: {
                     cardHolderName: 'John Doe',
                     cardNumber: '5528790000000008',
@@ -838,7 +890,7 @@ describe('Iyzipay API Test', function () {
                     identityNumber: '74300864791',
                     lastLoginDate: '2015-10-05 12:43:35',
                     registrationDate: '2013-04-21 15:12:09',
-                    registrationAddress: 'Address',
+                    registrationAddress: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     ip: '85.34.78.112',
                     city: 'Istanbul',
                     country: 'Turkey',
@@ -848,14 +900,14 @@ describe('Iyzipay API Test', function () {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
                     country: 'Turkey',
-                    address: 'Address',
+                    address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
                 },
                 basketItems: [
@@ -903,7 +955,5 @@ describe('Iyzipay API Test', function () {
                 done();
             });
         });
-
     });
-
 });
