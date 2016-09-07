@@ -316,7 +316,7 @@ describe('Iyzipay API Test', function () {
 
     describe('Installment', function () {
 
-        it('should retrieve installment info', function (done) {
+        it('should retrieve installments', function (done) {
             iyzipay.installmentInfo.retrieve({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -579,7 +579,7 @@ describe('Iyzipay API Test', function () {
             });
         });
 
-        it('should retrieve payment', function (done) {
+        it('should retrieve payment result', function (done) {
             iyzipay.payment.retrieve({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
@@ -730,14 +730,14 @@ describe('Iyzipay API Test', function () {
                 conversationId: '123456789',
                 subMerchantExternalId: 'B49224',
                 subMerchantType: Iyzipay.SUB_MERCHANT_TYPE.PERSONAL,
-                address: 'Address',
+                address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                 contactName: 'John',
                 contactSurname: 'Doe',
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890',
+                identityNumber: '31300864726',
                 currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
@@ -749,16 +749,16 @@ describe('Iyzipay API Test', function () {
             iyzipay.subMerchant.create({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                subMerchantExternalId: 'B49224',
+                subMerchantExternalId: 'S49222',
                 subMerchantType: Iyzipay.SUB_MERCHANT_TYPE.PRIVATE_COMPANY,
-                address: 'Address',
+                address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                 taxOffice: 'Tax office',
                 legalCompanyTitle: 'John Doe inc',
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890',
+                identityNumber: '31300864726',
                 currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
@@ -770,12 +770,12 @@ describe('Iyzipay API Test', function () {
             iyzipay.subMerchant.create({
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
-                subMerchantExternalId: 'B49224',
+                subMerchantExternalId: 'AS49224',
                 subMerchantType: Iyzipay.SUB_MERCHANT_TYPE.LIMITED_OR_JOINT_STOCK_COMPANY,
-                address: 'Address',
+                address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                 taxOffice: 'Tax office',
                 taxNumber: '9261877',
-                legalCompanyTitle: 'John Doe inc',
+                legalCompanyTitle: 'XYZ inc',
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
                 name: 'John\'s market',
@@ -792,14 +792,14 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 subMerchantKey: 'sub merchant key',
-                address: 'Address',
-                contactName: 'John',
+                iban: 'TR630006200027700006678204',
+                address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
+                contactName: 'Jane',
                 contactSurname: 'Doe',
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
-                name: 'John\'s market',
-                iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890',
+                name: 'Jane\'s market',
+                identityNumber: '31300864726',
                 currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
@@ -812,14 +812,14 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 subMerchantKey: 'sub merchant key',
-                address: 'Address',
+                address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                 taxOffice: 'Tax office',
-                legalCompanyTitle: 'John Doe inc',
+                legalCompanyTitle: 'Jane Doe inc',
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
-                name: 'John\'s market',
+                name: 'Jane\'s market',
                 iban: 'TR180006200119000006672315',
-                identityNumber: '1234567890',
+                identityNumber: '31300864726',
                 currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
                 console.log(err, result);
@@ -832,13 +832,13 @@ describe('Iyzipay API Test', function () {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 subMerchantKey: 'sub merchant key',
-                address: 'Address',
+                address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                 taxOffice: 'Tax office',
                 taxNumber: '9261877',
-                legalCompanyTitle: 'John Doe inc',
+                legalCompanyTitle: 'ABC inc',
                 email: 'email@submerchantemail.com',
                 gsmNumber: '+905350000000',
-                name: 'John\'s market',
+                name: 'Jane\'s market',
                 iban: 'TR180006200119000006672315',
                 currency: Iyzipay.CURRENCY.TRY
             }, function (err, result) {
