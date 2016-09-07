@@ -66,7 +66,7 @@ describe('Iyzipay API Test', function () {
     describe('Bkm', function () {
 
         it('should initialize bkm', function (done) {
-            var bkmInitRequest = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1',
@@ -130,7 +130,7 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.bkmInitialize.create(bkmInitRequest, function (err, result) {
+            iyzipay.bkmInitialize.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });
@@ -229,7 +229,7 @@ describe('Iyzipay API Test', function () {
     describe('Checkout Form', function () {
 
         it('should initialize checkout form', function (done) {
-            var checkoutFormInitRequest = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1',
@@ -296,7 +296,7 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.checkoutFormInitialize.create(checkoutFormInitRequest, function (err, result) {
+            iyzipay.checkoutFormInitialize.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });
@@ -332,7 +332,7 @@ describe('Iyzipay API Test', function () {
     describe('Payment', function () {
 
         it('should create payment', function (done) {
-            var payment = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1',
@@ -407,14 +407,14 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.payment.create(payment, function (err, result) {
+            iyzipay.payment.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });
         });
 
         it('should create marketplace payment', function (done) {
-            var payment = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1',
@@ -495,14 +495,14 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.payment.create(payment, function (err, result) {
+            iyzipay.payment.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });
         });
 
         it('should create payment with registered card', function (done) {
-            var payment = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1',
@@ -573,7 +573,7 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.payment.create(payment, function (err, result) {
+            iyzipay.payment.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });
@@ -596,7 +596,7 @@ describe('Iyzipay API Test', function () {
     describe('Pecco', function () {
 
         it('should initialize pecco', function (done) {
-            var peccoInitRequest = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '100000',
@@ -662,7 +662,7 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.peccoInitialize.create(peccoInitRequest, function (err, result) {
+            iyzipay.peccoInitialize.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });
@@ -862,7 +862,7 @@ describe('Iyzipay API Test', function () {
     describe('Threeds', function () {
 
         it('should initialize threeds', function (done) {
-            var threedsRequest = {
+            var request = {
                 locale: Iyzipay.LOCALE.TR,
                 conversationId: '123456789',
                 price: '1',
@@ -938,7 +938,7 @@ describe('Iyzipay API Test', function () {
                 ]
             };
 
-            iyzipay.threedsInitialize.create(threedsRequest, function (err, result) {
+            iyzipay.threedsInitialize.create(request, function (err, result) {
                 console.log(err, result);
                 done();
             });

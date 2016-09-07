@@ -50,7 +50,7 @@ var iyzipay = new Iyzipay({
     uri: 'https://sandbox-api.iyzipay.com'
 });
 
-var payment = {
+var request = {
     locale: Iyzipay.LOCALE.TR,
     conversationId: '123456789',
     price: '1',
@@ -125,7 +125,7 @@ var payment = {
     ]
 };
 
-iyzipay.payment.create(payment, function (err, result) {
+iyzipay.payment.create(request, function (err, result) {
     console.log(err, result);
     done();
 });
