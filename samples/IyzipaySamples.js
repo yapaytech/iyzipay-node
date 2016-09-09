@@ -54,7 +54,7 @@ describe('Iyzipay API Test', function () {
         it('should retrieve bin', function (done) {
             iyzipay.binNumber.retrieve({
                 locale: Iyzipay.LOCALE.TR,
-                conversationId: '123456',
+                conversationId: '123456789',
                 binNumber: '554960'
             }, function (err, result) {
                 console.log(err, result);
