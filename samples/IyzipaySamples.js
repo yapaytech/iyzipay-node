@@ -693,7 +693,7 @@ describe('Iyzipay API Test', function () {
             }, function (err, result) {
                 console.log(err, result);
                 done();
-            })
+            });
         });
     });
 
@@ -707,7 +707,7 @@ describe('Iyzipay API Test', function () {
             }, function (err, result) {
                 console.log(err, result);
                 done();
-            })
+            });
         });
 
         it('should retrieve bounced bank transfers', function (done) {
@@ -718,7 +718,7 @@ describe('Iyzipay API Test', function () {
             }, function (err, result) {
                 console.log(err, result);
                 done();
-            })
+            });
         });
     });
 
