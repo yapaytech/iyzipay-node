@@ -31,7 +31,7 @@ describe('Iyzipay API Test', function () {
             }, function (err, result) {
                 console.log(err, result);
                 done();
-            })
+            });
         });
     });
 
@@ -45,7 +45,7 @@ describe('Iyzipay API Test', function () {
             }, function (err, result) {
                 console.log(err, result);
                 done();
-            })
+            });
         })
     });
 
@@ -145,7 +145,7 @@ describe('Iyzipay API Test', function () {
                 console.log(err, result);
                 done();
             });
-        })
+        });
     });
 
     describe('Cancel', function () {
@@ -223,7 +223,7 @@ describe('Iyzipay API Test', function () {
                 console.log(err, result);
                 done();
             });
-        })
+        });
     });
 
     describe('Checkout Form', function () {
@@ -311,7 +311,7 @@ describe('Iyzipay API Test', function () {
                 console.log(err, result);
                 done();
             });
-        })
+        });
     });
 
     describe('Installment', function () {
@@ -588,9 +588,8 @@ describe('Iyzipay API Test', function () {
             }, function (err, result) {
                 console.log(err, result);
                 done();
-            })
+            });
         });
-
     });
 
     describe('Pecco', function () {
@@ -677,7 +676,7 @@ describe('Iyzipay API Test', function () {
                 console.log(err, result);
                 done();
             });
-        })
+        });
     });
 
     describe('Refund', function () {
