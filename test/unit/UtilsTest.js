@@ -110,4 +110,22 @@ describe('Iyzipay', function () {
         should.not.exist(price);
         done();
     });
+
+    it ('should return same price if given price is invalid', function (done) {
+        var price = utils.formatPrice(NaN);
+        price.should.be.NaN;
+        done();
+    });
+
+    it('should convert integer to string', function (done) {
+        var price = utils.formatPrice(23);
+        price.should.be.equal('23.0');
+        done();
+    });
+
+    it('should convert float to string', function (done) {
+        var price = utils.formatPrice(23.12);
+        price.should.be.equal('23.12');
+        done();
+    });
 });
