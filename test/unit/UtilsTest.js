@@ -111,7 +111,7 @@ describe('Iyzipay', function () {
         done();
     });
 
-    it ('should return same price if given price is invalid', function (done) {
+    it('should return same price if given price is invalid', function (done) {
         var price = utils.formatPrice(NaN);
         price.should.be.NaN;
         done();
