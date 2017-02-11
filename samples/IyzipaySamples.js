@@ -73,6 +73,7 @@ describe('Iyzipay API Test', function () {
                 basketId: 'B67832',
                 paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
                 callbackUrl: 'https://www.merchant.com/callback',
+                enabledInstallments: [2, 3, 6, 9],
                 buyer: {
                     id: 'BY789',
                     name: 'John',
