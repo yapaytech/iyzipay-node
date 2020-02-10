@@ -254,14 +254,26 @@ describe('Iyzipay Subscription API Test', function () {
 
     describe('Subscription Customer Card', function () {
         it('should update customer card', function (done) {
-            var updateCardRequest = {
+            var updateCardRequestWithCustomerCode = {
                 locale: Iyzipay.LOCALE.EN,
                 conversationId: '123456789',
                 customerReferenceCode: '3bb6d0b5-b53c-4732-a641-6fa3f8d39c21',
                 callbackUrl: 'callbackUrl'
             };
 
-            iyzipay.subscriptionCard.update(updateCardRequest, function (err, result) {
+            var updateCardRequestWithSubscriptionReferenceCode = {
+                locale: Iyzipay.LOCALE.EN,
+                conversationId: '123456789',
+                subscriptionReferenceCode: '3bb6d0b5-b53c-4732-a641-6fa3f8d39c21',
+                callbackUrl: 'callbackUrl'
+            };
+
+            iyzipay.subscriptionCard.update(updateCardRequestWithCustomerCode, function (err, result) {
+                console.log(err, result);
+                done();
+            });
+
+            iyzipay.subscriptionCard.updateWithSubscriptionReferenceCode(updateCardRequestWithSubscriptionReferenceCode, function (err, result) {
                 console.log(err, result);
                 done();
             });
