@@ -171,6 +171,7 @@ describe('Iyzipay Subscription API Test', function () {
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
+                    district: 'altunizade',
                     country: 'Turkey',
                     address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
@@ -178,6 +179,7 @@ describe('Iyzipay Subscription API Test', function () {
                 shippingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
+                    district: 'altunizade',
                     country: 'Turkey',
                     address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
@@ -205,6 +207,7 @@ describe('Iyzipay Subscription API Test', function () {
                 billingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
+                    district: 'altunizade',
                     country: 'Turkey',
                     address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
@@ -212,6 +215,7 @@ describe('Iyzipay Subscription API Test', function () {
                 shippingAddress: {
                     contactName: 'Jane Doe',
                     city: 'Istanbul',
+                    district: 'altunizade',
                     country: 'Turkey',
                     address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                     zipCode: '34742'
@@ -386,6 +390,7 @@ describe('Iyzipay Subscription API Test', function () {
                     billingAddress: {
                         contactName: 'Jane Doe',
                         city: 'Istanbul',
+                        district: 'altunizade',
                         country: 'Turkey',
                         address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                         zipCode: '34742'
@@ -393,6 +398,7 @@ describe('Iyzipay Subscription API Test', function () {
                     shippingAddress: {
                         contactName: 'Jane Doe',
                         city: 'Istanbul',
+                        district: 'altunizade',
                         country: 'Turkey',
                         address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                         zipCode: '34742'
@@ -441,6 +447,7 @@ describe('Iyzipay Subscription API Test', function () {
                     billingAddress: {
                         contactName: 'Jane Doe',
                         city: 'Istanbul',
+                        district: 'altunizade',
                         country: 'Turkey',
                         address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                         zipCode: '34742'
@@ -448,6 +455,7 @@ describe('Iyzipay Subscription API Test', function () {
                     shippingAddress: {
                         contactName: 'Jane Doe',
                         city: 'Istanbul',
+                        district: 'altunizade',
                         country: 'Turkey',
                         address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                         zipCode: '34742'
@@ -483,6 +491,7 @@ describe('Iyzipay Subscription API Test', function () {
                     billingAddress: {
                         contactName: 'Jane Doe',
                         city: 'Istanbul',
+                        district: 'altunizade',
                         country: 'Turkey',
                         address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                         zipCode: '34742'
@@ -490,6 +499,7 @@ describe('Iyzipay Subscription API Test', function () {
                     shippingAddress: {
                         contactName: 'Jane Doe',
                         city: 'Istanbul',
+                        district: 'altunizade',
                         country: 'Turkey',
                         address: 'Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1',
                         zipCode: '34742'
